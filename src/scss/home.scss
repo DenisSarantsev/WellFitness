@@ -1,0 +1,211 @@
+//====================================================================================================
+.page {
+	background-color: #FFFFFF;
+}
+
+// --------------------- SLIDER ----------------------------
+.slider {
+	margin-top: rem(40);
+	@media (max-width: em(1410)){
+		margin-top: 2.837vw;
+	}
+	&__slider {
+	}
+	&__wrapper {
+	}
+	&__slide {
+	}
+}
+.swiper {
+	padding: rem(0) rem(60);
+	position: relative;
+	@media (max-width:$mobile){
+		 padding: rem(0) 5vw; 
+	}
+}
+.swiper-wrapper {
+	display: flex;
+	justify-content: flex-start;
+}
+.swiper-slide {
+	// max-width: rem(1800);
+	width: 100%;
+	background: linear-gradient(180deg, #DEDFE7 0%, rgba(233, 234, 239, 0.00) 100%), #E9EAEF;
+	border-radius: 10px;
+	height: rem(500);
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	@media (max-width: em(1800)){
+		max-width: 100vw;
+		height: 27.778vw;
+	}
+	@media (max-width:$mobile){
+		 overflow: none; 
+		 height: auto;
+		 padding: 3vw;
+	}
+	&__red-triangle {
+		position: absolute;
+		left: 0;
+		bottom: rem(-3);
+		opacity: 0.9;
+		width: rem(1000);
+		height: rem(92);
+		z-index: -1;
+		@media (max-width: em(1800)){
+			width: 55.556vw;
+			height: 5.111vw;
+		}
+		@media (max-width:$mobile){
+			opacity: 0.2;
+			margin-bottom: -3vw;
+	 }
+	}
+	&__background-image {
+		position: absolute;
+		border-radius: rem(10);
+		height: rem(500);
+		bottom: 0;
+		right: rem(-230);
+		z-index: -1;
+		@media (max-width: em(1800)){
+			height: 100%;
+		}
+		@media (max-width:$mobile){
+			 opacity: 0.2; 
+		}
+	}
+	&__container {
+		position: relative;
+		height: 100%;
+		z-index: 10;
+		display: flex;
+		justify-content: space-between;
+		@media (max-width:$mobile){
+			 display: flex;
+			 justify-content: center; 
+		}
+	}
+	&__text-content {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: rem(24);
+		max-width: rem(512);
+		@media (max-width: em(1000)){
+			max-width: rem(400);
+		}
+		@media (max-width:$mobile){
+			 max-width: 100%;
+			 align-items: center;
+			 text-align: center;
+			 gap: rem(15);
+		}
+	}
+	&__subtitle {
+		color: $buttonsColor;
+		font-size: rem(24);
+		font-style: normal;
+		font-weight: 900;
+		line-height: 110%;
+		text-transform: uppercase;
+		@media (max-width: em(1800)){
+			font-size: 1.333vw;
+		}
+		@media (max-width:$tablet){
+			font-size: rem(14);
+		}
+	}
+	&__title {
+		color: $mainColor;
+		font-size: rem(49);
+		font-weight: 900;
+		line-height: 110%;
+		text-transform: uppercase;
+		& span {
+			font-weight: 200;
+		}
+		@media (max-width: em(1800)){
+			font-size: 2.722vw;
+		}
+		@media (max-width:$mobile){
+			 font-size: rem(22); 
+		}
+		@media (max-width: em(450)){
+			font-size: rem(18);
+		}
+	}
+	&__button {
+		color: $buttonsColor;
+		font-size: rem(14);
+		font-weight: 700;
+		border: 1px solid $buttonsColor;
+		padding: rem(12) rem(20);
+		border-radius: rem(4);
+		transition: all 0.3s ease 0s;
+		&:hover {
+			transition: all 0.3s ease 0s;
+			background-color: $buttonsColor;
+			color: #FFFFFF;
+		}
+	}
+	&__arrows-container {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		gap: rem(10);
+		bottom: rem(30);
+		right: 0;
+		@media (max-width: em(1800)){
+			bottom: 1.667vw;
+		}
+		@media (max-width:$tablet){
+			padding-bottom: 0.7vw;
+		}
+		&>* {
+			border-radius: 50%;
+			overflow: hidden;
+			width: rem(50);
+			height: rem(50);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@media (max-width:$tablet){
+				width: rem(35);
+				height: rem(35);
+			}
+			@media (max-width:$mobile){
+				display: none;
+			}
+		}
+	}
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+	& img {
+		transform: rotate(180deg);
+	}
+}
+
+// --------------------- FOR HOME -----------------------------------
+
+// --------------------- FOR CLUB -----------------------------------
+
+// --------------------- PROMOTION ----------------------------------
+
+// --------------------- IDEAS --------------------------------------
+
+// --------------------- POPULAR BRANDS -----------------------------
+
+// --------------------- ADVANTAGES ---------------------------------
+
+// --------------------- ABOUT COMPANY ------------------------------
+
+// --------------------- BECOME A PARTNER ---------------------------
+
+// --------------------- NEWS ---------------------------------------
+
+//====================================================================================================

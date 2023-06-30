@@ -1,0 +1,571 @@
+//====================================================================================================
+$headerPadding: 0 rem(30) 0 rem(30);
+$headerPaddingResponsive: 0 rem(10) 0 rem(10);
+$headerGap: rem(30);
+$headerGapResponsive: rem(20); 
+$headerGapResponsiveSecond: rem(10); 
+.header-padding {
+	padding: $headerPadding;
+	@media (max-width: em(1410)){
+		padding: $headerPaddingResponsive;
+	}
+}
+.header-gap {
+	column-gap: $headerGap;
+	@media (max-width: em(1410)){
+		column-gap: $headerGapResponsive;
+	}
+	@media (max-width: em(1200)){
+		column-gap: $headerGapResponsiveSecond;
+	}
+}
+.header-container {
+	max-width: rem(1440);
+	width: 100%;
+}
+
+
+
+.header {
+	background-color: $mainColor;
+	color: $secondTitleColor;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__top-header {
+	}
+	&__navigation {
+	}
+	&__purpose {
+	}
+}
+
+// --------------------------- HEADER TOP ----------------------------------------------------
+.header-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: rem(10);
+	border-bottom: 1px solid $borderColor;
+	padding: rem(24) rem(15) rem(20) rem(15);
+	@media (max-width: $tablet){
+		padding: 2.500vw rem(15) 2.083vw rem(15);
+	}
+	@media (max-width: em(650)){
+		padding: rem(16) rem(15) rem(10) rem(15);
+	}
+	&__left-container {
+	}
+	&__right-container {
+	}
+	&__navigation-icons {
+	}
+	&__search {
+		border-right: 1px solid $borderColor;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			transition: all 0.3s ease 0s;
+			& svg {
+				cursor: pointer;
+				& path {
+					fill: #FFFFFF;
+
+				}
+			}
+		}
+
+		@media (min-width:$tablet){
+			display: none;
+		}
+	}
+}
+.left-container {
+	display: flex;
+	align-items: center;
+	column-gap: rem(50);
+	@media (max-width: em(1410)){
+		column-gap: 3.546vw;
+	}
+	@media (max-width: em(1200)){
+		column-gap: rem(20);
+	}
+	@media (max-width: em(1100)){
+		flex-wrap: wrap;
+		row-gap: rem(10);
+	}
+	&__logo {
+		margin: rem(8) 0;
+		@media (max-width: em(1410)){
+			width: 19.858vw;
+			height: 2.057vw;
+		}
+		@media (max-width: em(860)){
+			width: rem(170);
+			height: rem(16);
+		}
+	}
+	&__region-button {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		transition: all 0.3s ease 0s;
+		@media (max-width: em(650)){
+			display: none;
+		}
+		& svg {
+			margin-top: rem(3);
+			& path {
+				transition: all 0.3s ease 0s;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+			transition: all 0.3s ease 0s;
+			color: $buttonsColor;
+			& svg {
+				& path {
+					fill: $buttonsColor;
+					transition: all 0.3s ease 0s;
+				}
+			}
+		}
+	}
+}
+.right-container {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	row-gap: rem(10);
+	align-items: center;
+	@media (max-width:$tablet){
+		gap: rem(30);
+	}
+	@media (max-width: em(500)){
+		gap: rem(15);
+	}
+	&__info {
+		display: flex;
+		align-items: center;
+		border-right: 1px solid $borderColor;
+		@media (max-width: $tablet){
+			display: none;
+		}
+	}
+	&__for-dealers {
+		white-space: nowrap;
+		transition: all 0.3s ease 0s;
+		@media (max-width: $tablet){
+			display: none;
+		}
+		&:hover {
+			transition: all 0.3s ease 0s;
+			color: $buttonsColor;
+			cursor: pointer;
+		}
+	}
+	&__for-partners {
+		@media (max-width: $tablet){
+			display: none;
+		}
+		& button {
+			white-space: nowrap;
+			padding: rem(10);
+			border-radius: 6px;
+			background: #384255;
+			font-size: rem(14);
+			font-weight: 700;
+			color: #FFFFFF;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				background: $buttonsColor;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+	&__contacts {
+		@media (max-width: $tablet){
+			display: none;
+		}
+		display: flex;
+		border-right: 1px solid $borderColor;
+		height: rem(34);
+		align-items: center;
+	}
+	&__contacts-left-block {
+		display: flex;
+		gap: rem(5);
+		align-items: center;
+	}
+	&__phone-number {
+		color: #FFFFFF;
+		font-size: rem(14);
+		font-weight: 500;
+		white-space: nowrap;
+	}
+	&__phone-region-button {
+		align-items: center;
+		transition: all 0.3s ease 0s;
+		& svg {
+			margin-bottom: rem(3);
+			& path {
+				transition: all 0.3s ease 0s;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+			transition: all 0.3s ease 0s;
+			color: $buttonsColor;
+			& svg {
+				& path {
+					fill: $buttonsColor;
+					transition: all 0.3s ease 0s;
+				}
+			}
+		}
+	}
+	&__phone-numbers-list {
+	}
+	&__phone-numbers-item {
+	}
+	&__phone-numbers-item-phone {
+	}
+	&__phone-numbers-item-region {
+	}
+	&__contacts-right-block {
+		& span {
+			white-space: nowrap;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				color: $buttonsColor;
+				transition: all 0.3s ease 0s;
+				cursor: pointer;
+			}
+		}
+	}
+	&__login {
+		@media (max-width: $tablet){
+			display: none;
+		}
+	}
+	&__login-button {
+		display: flex;
+		align-items: center;
+		gap: rem(14);
+		transition: all 0.3s ease 0s;
+		& svg {
+			& path {
+				transition: all 0.3s ease 0s;
+			}
+		}
+		&:hover {
+			color: #FFFFFF;
+			transition: all 0.3s ease 0s;
+			cursor: pointer;
+			& svg {
+				& path {
+					transition: all 0.3s ease 0s;
+					fill: #FFFFFF;
+					transition: all 0.3s ease 0s;
+				}
+			}
+		}
+		@media (max-width: em(1410)){
+			gap: rem(10);
+		}
+	}
+}
+
+.header-navigation {
+}
+.header-purpose {
+}
+.header-top-icons-container {
+	& svg {
+		display: none;
+		@media (max-width: $tablet){
+			display: flex;
+		}
+		@media (max-width: em(500)){
+			&:not(:last-child) {
+				display: none;
+			}
+		}
+	}
+}
+
+// --------------------------- HEADER NAVIGATION ----------------------------------------------------
+
+.header-navigation {
+	display: flex;
+	justify-content: space-between;
+	padding: rem(16) rem(15);
+	align-items: center;
+	column-gap: rem(20);
+	@media (max-width: $tablet){
+		padding: 0 rem(15);
+	}
+	&__left-container {
+
+	}
+	&__navigation-icons {
+
+	}
+}
+.header-container {
+}
+.navigation-left-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: rem(30);
+	@media (max-width: em(1410)){
+		column-gap: rem(20);
+	}
+	@media (max-width: $tablet){
+		display: none;
+	}
+	&__catalog-button {
+		padding: rem(12) rem(20);
+		background-color: $buttonsColor;
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+		border-radius: 4px;
+		color: #FFFFFF;
+		font-size: rem(14);
+		font-weight: 700;
+		margin-right: rem(20);
+		transition: all 0.3s ease 0s;
+		@media (max-width: em(1410)){
+			margin-right: rem(0);
+		}
+		&:hover {
+			transition: all 0.3s ease 0s;
+			background-color: #E32A38;
+		}
+	}
+	&__search {
+	}
+	&__navigation-menu {
+	}
+	&__navigation-menu-list {
+		display: flex;
+		align-items: center;
+		column-gap: rem(36);
+		row-gap: 0.709vw;
+		flex-wrap: wrap;
+		padding: rem(10) 0;
+		@media (max-width: em(1410)){
+			column-gap: 2.553vw;
+		}
+	}
+	&__navigation-menu-item {
+		color: #FFFFFF;
+		font-size: rem(14);
+		line-height: 140%;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			transition: all 0.3s ease 0s;
+			color: $buttonsColor;
+		}
+	}
+}
+
+.navigation-right-container {
+	& svg {
+		@media (max-width: $tablet){
+			display: none;
+		}
+	}
+}
+
+// --------------------------- HEADER PURPOSE ----------------------------------------------------
+
+.header-purpose {
+	background-color: #2A2C38;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	&__links-container {
+		width: 100%;
+		padding: rem(10) rem(15);
+	}
+	&__menu-list {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+	&__menu-item {
+		padding: rem(6) 0;
+		&:not(:first-child) {
+			padding-left: rem(19);
+		}
+		&:not(:last-child) {
+			padding-right: rem(19);
+			border-right: 1px solid $borderColor;
+		}
+	}
+	&__menu-link {
+		display: flex;
+		gap: rem(10);
+		align-items: center;
+		& span {
+			font-size: rem(14);
+			font-weight: 700;
+			color: #FFFFFF;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				transition: all 0.3s ease 0s;
+				color: $buttonsColor;
+			}
+		}
+		&:hover {
+			& svg {
+				& path {
+					fill: $buttonsColor;
+					transition: all 0.3s ease 0s;
+				}
+			}
+		}
+		& svg {
+			margin-top: rem(2);
+			& path {
+				fill: #FFFFFF;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+}
+
+// --------------------------- NAVIGATION ICONS ----------------------------------------------------
+
+.navigation-icons {
+	display: flex;
+	align-items: center;
+	column-gap: rem(30);
+	&:hover {
+		cursor: pointer;
+	}
+	&__first-svg {
+			& rect {
+				fill: #FFFFFF;
+				transition: all 0.3s ease 0s;
+			}
+			&:hover {
+				& rect {
+					transition: all 0.3s ease 0s;
+					fill: $buttonsColor;
+				}
+			}
+	}
+	&__second-svg {
+		& path {
+			fill: #FFFFFF;
+		}
+		&:hover {
+			& path {
+				transition: all 0.3s ease 0s;
+				fill: $buttonsColor;
+			}
+		}
+	}
+	&__third-svg {
+		& path {
+			stroke: #FFFFFF;
+		}
+		&:hover {
+			& path {
+				transition: all 0.3s ease 0s;
+				stroke: $buttonsColor;
+			}
+		}
+	}
+}
+
+// --------------------------- NAVIGATION SEARCH ----------------------------------------------------
+
+.search-icon-header {
+	padding-right: rem(30);
+	border-right: 1px solid $borderColor;
+	@media (max-width: em(1410)){
+		padding-right: rem(0);
+		border-right: none;
+	}
+}
+
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+	margin: rem(8) 0;
+	&:hover {
+		& span,
+		&::before,
+		&::after {
+			content: "";
+			background-color: $buttonsColor;
+		}
+		
+	}
+	@media (max-width: $tablet){
+		margin: rem(4) 0 0 0;
+	}
+	@media (max-width: em(500)){
+		margin: rem(4) 0 0 0;
+	}
+	@media (max-width: $tablet) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(1.9);
+			background-color: #FFFFFF;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+
+
+
+
