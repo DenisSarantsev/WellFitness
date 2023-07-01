@@ -3,3 +3,41 @@
 ._hidden {
 	display: none;
 }
+
+.block-title {
+	color: $mainColor;
+	font-size: rem(30);
+	font-weight: 700;
+	line-height: 110%;
+	@media (max-width:$mobile){
+		font-size: 3.906vw;
+	}
+	@media (max-width: em(550)){
+		font-size: rem(21);
+	}
+	@media (max-width: em(450)){
+		font-size: rem(18);
+	}
+}
+
+.block-button {
+	color: $buttonsColor;
+	font-size: rem(14);
+	font-weight: 700;
+	border: 1px solid $buttonsColor;
+	padding: rem(12) rem(20);
+	border-radius: rem(7);
+	transition: all 0.3s ease 0s;
+	&:hover {
+		transition: all 0.3s ease 0s;
+		background-color: $buttonsColor;
+		color: #FFFFFF;
+	}
+}
+
+.block-margin-top {
+	margin-top: rem(120);
+	@media (max-width: em(1410)){
+		margin-top: 6vw;
+	}
+}
