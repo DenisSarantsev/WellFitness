@@ -9,14 +9,12 @@
 	font-size: rem(30);
 	font-weight: 700;
 	line-height: 110%;
+	width: 100%;
 	@media (max-width:$mobile){
 		font-size: 3.906vw;
 	}
 	@media (max-width: em(550)){
-		font-size: rem(21);
-	}
-	@media (max-width: em(450)){
-		font-size: rem(18);
+		font-size: rem(22);
 	}
 }
 
